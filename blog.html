@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.0.2/dist/full.css" rel="stylesheet">
+</head>
+<body>
+    <head>
+        <nav class="flex justify-between items-center bg-white p-4 rounded-lg shadow-md">
+            <div class="flex items-center bg-white p-4 rounded-lg">
+                <img src="assets/logo.png" alt="">
+                <h1 class="text-xl font-bold mx-2">
+                Dev<span class="text-blue-500">Board</span>
+                </h1>
+            </div>
+            <div onclick="redirectToMainpage()" class="bg-gradient-to-r from-blue-700 via-blue-500 to-blue-300 bg-opacity-90 text-white p-4 rounded-lg shadow-md flex items-center justify-center">
+                <div class="ml">
+                    <p class="text-lg font-bold ">Back to Desk</p>
+                </div>
+            </div>
+        </nav>
+    </head>
+    <main>
+        <h1 class="flex items-center justify-center text-4xl font-bold m-4">Blog</h1>
+        <div class="bg-white shadow-md m-2 ">
+            <h2 class="text-2xl font-bold">
+                Question-1: What are the different ways to select an element in the DOM?
+            </h2>
+            <p class="text-xl">
+                Answer: Elements can be selected using getElementById(), getElementsByClassName(), getElementsByTagName(), querySelector(), and querySelectorAll().
+            </p>
+        </div>
+        <div  class="bg-white shadow-md m-2 ">
+            <h2 class="text-2xl font-bold">
+                Question-2: What is the difference between innerHTML, innerText, and textContent ?
+            </h2>
+            <p class="text-xl">
+                Answer: innerHTML gets/sets HTML content, innerText returns visible text content, and textContent returns all text content, including hidden text.
+            </p>
+        </div>
+        <div  class="bg-white shadow-md m-2 ">
+            <h2 class="text-2xl font-bold">
+                Question-3: What is event delegation in the DOM?
+            </h2>
+            <p class="text-xl">
+                Answer: Event delegation is attaching a single event listener to a parent element, allowing events on child elements to be handled through bubbling.
+            </p>
+        </div>
+        <div class="bg-white shadow-md m-2 ">
+            <h2 class="text-2xl font-bold">
+                Question-4: What is event bubbling in the DOM?
+            </h2>
+            <p class="text-xl">
+                Answer: Event bubbling is the process where an event starts from the target element and propagates up to the parent elements in the DOM.
+            </p>
+        </div>
+        <div class="bg-white shadow-md m-2 ">
+            <h2 class="text-2xl font-bold">
+                Question-5: How do you create, add, and remove elements using JavaScript
+            </h2>
+            <p class="text-xl">
+                Answer: Elements can be created with document.createElement(), added with appendChild() or insertBefore(), and removed with removeChild().
+            </p>
+        </div>
+    </main>
+    <script>
+        function redirectToMainpage() {
+            window.location.href = "index.html";
+        }
+    </script>
+</body>
+</html>

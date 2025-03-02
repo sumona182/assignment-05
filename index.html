@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevBoard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.0.2/dist/full.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100" id="mainBody">
+    <div class="p-5">
+        <!-- Navbar -->
+        <nav class="flex justify-between items-center bg-white p-4 rounded-lg shadow-md">
+            <div class="flex items-center bg-white p-4 rounded-lg">
+                <img src="assets/logo.png" alt="">
+                <h1 class="text-xl font-bold mx-2">
+                Dev<span class="text-blue-500">Board</span>
+                </h1>
+            </div>
+            <div class="flex items-center ">
+                <img src="assets/checkbox.png" alt="">
+                <span id="taskCounter" class=" px-3 py-1 rounded-lg text-xl font-bold">23</span>
+                <div class="mx-3">
+                    <button class="btn btn-circle relative" onclick="changeBgColor()">
+                        <img src="assets/theme-btn.png" alt="Reload" class="absolute inset-0 w-6 h-6 m-auto ">
+                    </button>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Main Content -->
+        <main class="grid grid-cols-4 gap-3 mt-5">
+            <!-- Overview -->
+            <div class="col-span-3">
+                <div class="grid grid-cols-4 gap-3">
+                    <div class="bg-white p-4 rounded-lg shadow-md flex flex-col">
+                        <div class="flex items-center justify-center m-2 ">
+                            <img src="assets/checkbox.png" alt="">
+                            <div class="mx-5"><p class="text-gray-600 ">Task Assigned</p>
+                                <p id="taskAssigned" class="text-2xl font-bold">6</p>
+                            </div>
+                        </div>  
+                    </div>
+                    <div onclick="redirectToMainpage()" class="bg-gradient-to-r from-blue-700 via-blue-500 to-blue-300 bg-opacity-90 text-white p-4 rounded-lg shadow-md flex items-center justify-center col-span-2">
+                        <img src="assets/board.png" alt="">
+                        <div class="ml-10">
+                            <p class="text-lg font-bold ">Discover Something <br> New Today!</p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow-md flex items-center justify-between">
+                        <img src="assets/calender.png" alt="">
+                        <div class="flex flex-col mr-6">
+                            <p id="currentDay" class="text-gray-600"></p>
+                            <p id="currentDate" class="text-lg font-bold"></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Task Cards -->
+                <div class="grid grid-cols-3 gap-4 mt-5">
+                    <div class="bg-white p-4 rounded-lg shadow-md task-card">
+                        <p class="text-sm bg-gray-200 px-2 py-1 inline-block rounded-md">ShopEase</p>
+                        <h2 class="font-bold mt-2">Fix Mobile Button Issue</h2>
+                        <p class="text-sm text-gray-500">Debug using Chrome DevTools...</p>
+                        <p class="text-sm text-gray-500 mt-2">Deadline: 21 March 2025</p>
+                        <button class="btn btn-primary btn-sm mt-3 bg-blue-600 text-white complete-btn">Completed</button>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow-md task-card">
+                        <p class="text-sm bg-gray-200 px-2 py-1 inline-block rounded-md">CloudSync</p>
+                        <h2 class="font-bold mt-2">Add Dark Mode</h2>
+                        <p class="text-sm text-gray-500">Store user preferences...</p>
+                        <p class="text-sm text-gray-500 mt-2">Deadline: 21 March 2025</p>
+                        <button class="btn btn-primary btn-sm mt-3 bg-blue-600 text-white complete-btn">Completed</button>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow-md task-card">
+                        <p class="text-sm bg-gray-200 px-2 py-1 inline-block rounded-md">SwiftPay</p>
+                        <h2 class="font-bold mt-2">Optimize Home Page</h2>
+                        <p class="text-sm text-gray-500">Debug using Chrome DevTools...</p>
+                        <p class="text-sm text-gray-500 mt-2">Deadline: 21 March 2025</p>
+                        <button class="btn btn-primary btn-sm mt-3 bg-blue-600 text-white complete-btn">Completed</button>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow-md task-card">
+                        <p class="text-sm bg-gray-200 px-2 py-1 inline-block rounded-md">Meta</p>
+                        <h2 class="font-bold mt-2">Add new emoji ✌️</h2>
+                        <p class="text-sm text-gray-500">Debug using Chrome DevTools...</p>
+                        <p class="text-sm text-gray-500 mt-2">Deadline: 21 March 2025</p>
+                        <button class="btn btn-primary btn-sm mt-3 bg-blue-600 text-white complete-btn">Completed</button>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow-md task-card">
+                        <p class="text-sm bg-gray-200 px-2 py-1 inline-block rounded-md">Google LLC</p>
+                        <h2 class="font-bold mt-2">Integrate OpenAI API</h2>
+                        <p class="text-sm text-gray-500">Debug using Chrome DevTools...</p>
+                        <p class="text-sm text-gray-500 mt-2">Deadline: 21 March 2025</p>
+                        <button class="btn btn-primary btn-sm mt-3 bg-blue-600 text-white complete-btn">Completed</button>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow-md task-card">
+                        <p class="text-sm bg-gray-200 px-2 py-1 inline-block rounded-md">Glassdoor</p>
+                        <h2 class="font-bold mt-2">Improve Job Searching</h2>
+                        <p class="text-sm text-gray-500">Debug using Chrome DevTools...</p>
+                        <p class="text-sm text-gray-500 mt-2">Deadline: 21 March 2025</p>
+                        <button class="btn btn-primary btn-sm mt-3 bg-blue-600 text-white complete-btn">Completed</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Activity Log -->
+            <div class="bg-white p-4 rounded-lg shadow-md h-full">
+                <h3 class="font-bold">Activity Log</h3>
+                <button class="btn btn-sm btn-primary text-white bg-blue-600 mt-2" onclick="clearLog()">Clear History</button>
+                <div id="activityLog" class="mt-2"></div>
+            </div>
+        </main>
+    </div>
+    <script>
+        function changeBgColor() {
+            const colors = ["#87CEEB", "#4169E1", "#1E90FF", "#0000CD", "#ADD8E6", "#4682B4", "#000080", "#6495ED", "#00008B", "#00BFFF", "#F0FFFF", "#0047AB"];
+            document.getElementById("mainBody").style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+        }
+
+        let taskCount = 23;
+        let taskAssignedCount = 6; 
+        document.querySelectorAll('.complete-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                if (!this.disabled) {
+                    this.disabled = true;
+                    this.classList.add("opacity-50", "cursor-not-allowed");
+                    taskAssignedCount--;
+                    document.getElementById("taskAssigned").textContent = taskAssignedCount;
+                    taskCount++;
+                    document.getElementById("taskCounter").innerText = taskCount;
+                    let taskName = this.closest('.task-card').querySelector('h2').innerText;
+                    document.getElementById("activityLog").innerHTML += 
+                    `<p>You have completed the task: <b>${taskName}</b> at ${new Date().toLocaleTimeString()}</p>`;
+
+                }
+            });
+        });
+
+        function clearLog() {
+            document.getElementById("activityLog").innerHTML = "";
+        }
+
+        function updateDate() {
+            const today = new Date();
+            const options = { weekday: "long", month: "short", day: "numeric", year: "numeric" };
+            const formattedDate = today.toLocaleDateString("en-US", options);
+            const [weekday, month, day, year] = formattedDate.split(" ");
+            document.getElementById("currentDay").textContent = weekday + "";
+            document.getElementById("currentDate").textContent = `${month} ${day} ${year}`;
+        }
+        updateDate();
+
+        function redirectToMainpage() {
+            window.location.href = "blog.html";
+        }
+    </script>
+</body>
+</html>
+
