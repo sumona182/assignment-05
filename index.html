@@ -63,50 +63,52 @@
                         <h2 class="font-bold mt-2">Fix Mobile Button Issue</h2>
                         <p class="text-sm text-gray-500">Debug using Chrome DevTools...</p>
                         <p class="text-sm text-gray-500 mt-2">Deadline: 21 March 2025</p>
-                        <button class="btn btn-primary btn-sm mt-3 bg-blue-600 text-white complete-btn">Completed</button>
+                        <button onclick="alert('Board updated successfully')" class="btn btn-primary btn-sm mt-3 bg-blue-600 text-white complete-btn">Completed</button>
                     </div>
                     <div class="bg-white p-4 rounded-lg shadow-md task-card">
                         <p class="text-sm bg-gray-200 px-2 py-1 inline-block rounded-md">CloudSync</p>
                         <h2 class="font-bold mt-2">Add Dark Mode</h2>
                         <p class="text-sm text-gray-500">Store user preferences...</p>
                         <p class="text-sm text-gray-500 mt-2">Deadline: 21 March 2025</p>
-                        <button class="btn btn-primary btn-sm mt-3 bg-blue-600 text-white complete-btn">Completed</button>
+                        <button onclick="alert('Board updated successfully')" class="btn btn-primary btn-sm mt-3 bg-blue-600 text-white complete-btn">Completed</button>
                     </div>
                     <div class="bg-white p-4 rounded-lg shadow-md task-card">
                         <p class="text-sm bg-gray-200 px-2 py-1 inline-block rounded-md">SwiftPay</p>
                         <h2 class="font-bold mt-2">Optimize Home Page</h2>
                         <p class="text-sm text-gray-500">Debug using Chrome DevTools...</p>
                         <p class="text-sm text-gray-500 mt-2">Deadline: 21 March 2025</p>
-                        <button class="btn btn-primary btn-sm mt-3 bg-blue-600 text-white complete-btn">Completed</button>
+                        <button onclick="alert('Board updated successfully')" class="btn btn-primary btn-sm mt-3 bg-blue-600 text-white complete-btn">Completed</button>
                     </div>
                     <div class="bg-white p-4 rounded-lg shadow-md task-card">
                         <p class="text-sm bg-gray-200 px-2 py-1 inline-block rounded-md">Meta</p>
                         <h2 class="font-bold mt-2">Add new emoji ✌️</h2>
                         <p class="text-sm text-gray-500">Debug using Chrome DevTools...</p>
                         <p class="text-sm text-gray-500 mt-2">Deadline: 21 March 2025</p>
-                        <button class="btn btn-primary btn-sm mt-3 bg-blue-600 text-white complete-btn">Completed</button>
+                        <button onclick="alert('Board updated successfully')" class="btn btn-primary btn-sm mt-3 bg-blue-600 text-white complete-btn">Completed</button>
                     </div>
                     <div class="bg-white p-4 rounded-lg shadow-md task-card">
                         <p class="text-sm bg-gray-200 px-2 py-1 inline-block rounded-md">Google LLC</p>
                         <h2 class="font-bold mt-2">Integrate OpenAI API</h2>
                         <p class="text-sm text-gray-500">Debug using Chrome DevTools...</p>
                         <p class="text-sm text-gray-500 mt-2">Deadline: 21 March 2025</p>
-                        <button class="btn btn-primary btn-sm mt-3 bg-blue-600 text-white complete-btn">Completed</button>
+                        <button onclick="alert('Board updated successfully')" class="btn btn-primary btn-sm mt-3 bg-blue-600 text-white complete-btn">Completed</button>
                     </div>
                     <div class="bg-white p-4 rounded-lg shadow-md task-card">
                         <p class="text-sm bg-gray-200 px-2 py-1 inline-block rounded-md">Glassdoor</p>
                         <h2 class="font-bold mt-2">Improve Job Searching</h2>
                         <p class="text-sm text-gray-500">Debug using Chrome DevTools...</p>
                         <p class="text-sm text-gray-500 mt-2">Deadline: 21 March 2025</p>
-                        <button class="btn btn-primary btn-sm mt-3 bg-blue-600 text-white complete-btn">Completed</button>
+                        <button onclick="showAlerts()" class="btn btn-primary btn-sm mt-3 bg-blue-600 text-white complete-btn">Completed</button>
                     </div>
                 </div>
             </div>
             
             <!-- Activity Log -->
             <div class="bg-white p-4 rounded-lg shadow-md h-full">
-                <h3 class="font-bold">Activity Log</h3>
-                <button class="btn btn-sm btn-primary text-white bg-blue-600 mt-2" onclick="clearLog()">Clear History</button>
+                   <div class="flex "><img src="assets/activity.png" alt="">
+                    <h2 class = "font-bold" > Activity Log</h2></div>
+            
+                <button class="btn btn-sm btn-primary text-white bg-blue-600 mt-4 " onclick="clearLog()">Clear History</button>
                 <div id="activityLog" class="mt-2"></div>
             </div>
         </main>
@@ -152,6 +154,10 @@
 
         function redirectToMainpage() {
             window.location.href = "blog.html";
+        }
+        function showAlerts() {
+            alert("Board updated successfully");
+            alert("Congrats!!! You have completed all the current tasks.")
         }
     </script>
 </body>
